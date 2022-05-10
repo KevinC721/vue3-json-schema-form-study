@@ -2,7 +2,7 @@
  * @Author: caiwenkai
  * @Date: 2022-05-10 21:45:05
  * @LastEditors: caiwenkai
- * @LastEditTime: 2022-05-10 21:58:42
+ * @LastEditTime: 2022-05-11 00:06:36
  * @Discription: 
  * @FilePath: \vue3-json-schema-form-study\schema-tests\test1.js
  */
@@ -10,15 +10,35 @@ const Ajv = require("ajv")
 const addFormats = require("ajv-formats")
 const ajv = new Ajv() // options can be passed, e.g. {allErrors: true}
 addFormats(ajv)
+
+// 自定义format 
 ajv.addFormat('selfName', (data) => {
   console.log(data, '------------');
   return data === 'Kevin'
 })
 
+// 自定义关键字
+ajv.addKeyword('testKeyword', {
+  /**
+   * 
+   * @param {*} schema 自定义关键字的value
+   * @param {*} data 当前关键字所在的key传入的值
+   * @returns 
+   */
+  validate(schema, data) {
+    console.log(schema, data, '自定义关键字');
+    if(schema === true) return true
+    else return schema.length === 6
+  }
+})
+
 const schema = {
   type: "object",
   properties: {
-    foo: {type: "integer"},
+    foo: {
+      type: "number",
+      testKeyword: false
+    },
     bar: {type: "string"},
     name: {
       type: "string",
