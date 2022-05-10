@@ -1,3 +1,11 @@
+/*
+ * @Author: caiwenkai
+ * @Date: 2022-05-10 21:45:05
+ * @LastEditors: caiwenkai
+ * @LastEditTime: 2022-05-10 21:45:21
+ * @Discription: 
+ * @FilePath: \vue3-json-schema-form-study\schema-tests\test1.js
+ */
 const Ajv = require("ajv")
 const addFormats = require("ajv-formats")
 const ajv = new Ajv() // options can be passed, e.g. {allErrors: true}
@@ -52,7 +60,7 @@ const data = {
   // name: "Kevin's Project",
   name: "Kevin",
   emails: "Kevin@email.com",
-  pets: ['dog', 123]
+  pets: ['dog', 1234]
 }
 
 const valid = validate(data)
