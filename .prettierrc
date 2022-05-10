@@ -1,0 +1,10 @@
+{
+  // 是否需要必须写封号
+  "semi": true,
+  // 是否使用单引号
+  "singleQuote": true,
+  // 是否在写箭头函数的时候必须写括号，always-必须写括号，avoid-单个参数不需要写括号的时候可以不写
+  "arrowParens": "always",
+  // 允许您在大多数环境中使用尾随逗号而无需转译
+  "trailingComma": "es5"
+}
