@@ -1,8 +1,23 @@
+/*
+ * @Author: caiwenkai
+ * @Date: 2022-05-10 16:00:04
+ * @LastEditors: caiwenkai
+ * @LastEditTime: 2022-05-11 10:43:34
+ * @Discription: 
+ * @FilePath: \vue3-json-schema-form-study\src\main.ts
+ */
 import { createApp, defineComponent, h, reactive, ref } from "vue";
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+
 // import App from "./App.vue";
 import HelloWorld from "./components/HelloWorld.vue";
 
 import App from "./App"
+
+const app = createApp(App)
+
+app.use(ElementPlus)
 
 // 由于在 h 函数中，img 标签内的 src 属性不会像 .vue 文件中的 template 模板中一样去查找对应文件的想怼路径，因此需要通过外部直接引入的方式来实现。
 // 但是在ts中配置了不可以使用import，因此需要通过require的方式来引入外界图片
@@ -54,4 +69,4 @@ import App from "./App"
 //   }
 // });
 
-createApp(App).mount("#app");
+app.mount("#app");

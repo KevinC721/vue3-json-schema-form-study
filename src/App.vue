@@ -1,3 +1,11 @@
+<!--
+ * @Author: caiwenkai
+ * @Date: 2022-05-10 16:00:04
+ * @LastEditors: caiwenkai
+ * @LastEditTime: 2022-05-11 11:21:51
+ * @Discription: 
+ * @FilePath: \vue3-json-schema-form-study\src\App.vue
+-->
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" :age="12" />

@@ -1,3 +1,11 @@
+<!--
+ * @Author: caiwenkai
+ * @Date: 2022-05-10 16:00:04
+ * @LastEditors: caiwenkai
+ * @LastEditTime: 2022-05-11 11:23:03
+ * @Discription: 
+ * @FilePath: \vue3-json-schema-form-study\src\components\HelloWorld.vue
+-->
 <template>
   <div>{{ age }}</div>
 </template>
