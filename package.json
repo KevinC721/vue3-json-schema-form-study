@@ -12,6 +12,8 @@
     "ajv": "^8.11.0",
     "ajv-formats": "^2.1.1",
     "ajv-i18n": "^4.2.0",
+    "commit": "git add . && git-cz",
+    "commitizen": "^4.2.4",
     "core-js": "^3.6.5",
     "element-plus": "^2.2.0",
     "vue": "^3.0.0"
